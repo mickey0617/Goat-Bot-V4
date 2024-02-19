@@ -21,7 +21,7 @@ module.exports = {
     }
 
   
-    const loadingMessage = await message.reply("downloading your song🕐..");
+    const loadingMessage = await message.reply("[𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙄𝙉𝙂 𝙎𝙊𝙉𝙂 🕐...]");
 
     try {
      
@@ -44,7 +44,7 @@ module.exports = {
 
   
       await message.reply({
-        body: `🎧 Playing: ${songName}`,
+        body: `[🎧] Playing: ${songName}`,
         attachment: fs.createReadStream(KshitizFilePath)
       });
 
