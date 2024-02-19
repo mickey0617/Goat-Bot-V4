@@ -2,7 +2,7 @@ const axios = require('axios');
 
 module.exports = {
     config: {
-        name: 'at',
+        name: 'autotrans',
         author: 'Allou Mohamed',
         version: '1.0',
         role: 2,
