@@ -61,7 +61,7 @@ module.exports = {
 
       await api.sendMessage({
         attachment: imgData,
-        body: `✨𝙂𝙀𝙉𝙀𝙍𝘼𝙏𝙀𝘿 𝙋𝙄𝘾✨\n`
+        body: `✨𝙂𝙀𝙉𝙀𝙍𝘼𝙏𝙀𝘿 𝙋𝙄𝘾✨\n────────────\n🟢 𝘼𝙀-𝙎𝙏𝙃𝙀𝙍 ⚪ `
       }, event.threadID, event.messageID);
 
     } catch (error) {
