@@ -3,6 +3,7 @@ const axios = require("axios");
 module.exports = {
   config: {
     name: "art",
+    aliases:["⭐"],
     role: 0,
     author: "OtinXSandip",
     countDown: 5,
@@ -24,19 +25,19 @@ module.exports = {
     const [model] = text.split('|').map((text) => text.trim());
     const puti = model || "6";
         
-    api.setMessageReaction("⏰", event.messageID, () => {}, true);
+    api.setMessageReaction("✨", event.messageID, () => {}, true);
     const lado = `https://sandipbaruwal.onrender.com/art?url=${imgurl}&model=${puti}`;
 
    const baby = await require('tinyurl').shorten(lado);
 
-message.reply("✅| Generating please wait.", async (err, info) => {
+message.reply("⚙️ | ✨𝗚𝗘𝗡𝗘𝗥𝗔𝗧𝗜𝗡𝗚 𝘈𝘙𝘛✨.", async (err, info) => {
       const attachment = await global.utils.getStreamFromURL(lado);
       message.reply({  body: `${baby}`,
         attachment: attachment
       });
       let ui = info.messageID;          
       message.unsend(ui);
-      api.setMessageReaction("✅", event.messageID, () => {}, true);
+      api.setMessageReaction("🟢", event.messageID, () => {}, true);
     });
   }
 };
