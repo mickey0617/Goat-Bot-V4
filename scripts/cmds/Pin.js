@@ -34,7 +34,7 @@ module.exports = {
       }
       const keySearchs = keySearch.substr(0, keySearch.indexOf("-")).trim();
       const numberSearch =
-        parseInt(keySearch.split("-").pop().trim()) || 6;
+        parseInt(keySearch.split("-").pop().trim()) || 15;
 
       const apiUrl = `https://code-merge-api-hazeyy01.replit.app/pinterest/api?search=${encodeURIComponent(// api credit hazayy
         keySearchs
