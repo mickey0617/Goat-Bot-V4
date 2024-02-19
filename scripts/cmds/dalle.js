@@ -7,7 +7,7 @@ const _U = "1JubfI-ZIOqt_prEgk4idkkgguUbrBUqx-Fh47adtdeFqGH7Bz6D_hwcJdEhW5DjmAJY
 module.exports = {
   config: {
     name: "dalle2",
-    aliases: ["dalle2"],
+    aliases: ["dalle","imagine","✨"],
     version: "1.0.2",
     author: "Samir Œ ",
     role: 0,
@@ -47,7 +47,7 @@ module.exports = {
       const data = res.data.results.images;
 
       if (!data || data.length === 0) {
-        api.sendMessage("No images found for the provided query.", event.threadID, event.messageID);
+        api.sendMessage("🔴 𝙐 𝘣𝘦𝘵𝘵𝘦𝘳 𝘸𝘪𝘵𝘩 𝙈𝙊𝙉𝙆𝙀𝙔 𝘥𝘰 𝘪𝘵 𝘤𝘰𝘳𝘳𝘦𝘤𝘵𝘭𝘺 😾.", event.threadID, event.messageID);
         return;
       }
 
@@ -61,7 +61,7 @@ module.exports = {
 
       await api.sendMessage({
         attachment: imgData,
-        body: `Here's your generated image`
+        body: `✨𝙂𝙀𝙉𝙀𝙍𝘼𝙏𝙀𝘿 𝙋𝙄𝘾✨\n`
       }, event.threadID, event.messageID);
 
     } catch (error) {
