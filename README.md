@@ -4,7 +4,7 @@
 <h1 align="center"><img src="./dashboard/images/logo-non-bg.png" width="22px"> 
 
 # FB PROFILE PHOTO</h1>
-<img src="https://i.postimg.cc/k5LWcCHy/received-3213353488973307.jpg" alt="banner">
+<img src="https://i.postimg.cc/WbJzGrvx/received-1469999420253774.jpg" alt="banner">
 <h1 align="center"><img src="./dashboard/images/logo-non-bg.png" width="22px"> 
  
   # ﹝𝗔𝗘𝗦𝗧𝗛𝗘𝗥﹞(𝘊𝘺𝘣𝘦𝘳𝘱𝘶𝘯𝘬)  V𝟭 - ABOUT PROJECT INFORMATION</h1>
