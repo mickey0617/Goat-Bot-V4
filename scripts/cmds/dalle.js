@@ -7,7 +7,7 @@ const _U = "1JubfI-ZIOqt_prEgk4idkkgguUbrBUqx-Fh47adtdeFqGH7Bz6D_hwcJdEhW5DjmAJY
 module.exports = {
   config: {
     name: "dalle2",
-    aliases: ["dalle","imagine","✨"],
+    aliases: ["dalle","✨"],
     version: "1.0.2",
     author: "Samir Œ ",
     role: 0,
