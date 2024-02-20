@@ -34,7 +34,7 @@ module.exports = {
       const categories = {};
       let msg = "";
 
-      msg += `》🌸𝗦𝗔𝗪𝗔𝗧𝗔𝗡𝗜🌸𝗖𝗠𝗗\n `; // replace with your name 
+      msg += `》[𝘼𝙀𝙎𝙏𝙃𝙀𝙍⚪-𝗖𝗠𝗗𝙨]\n〓〓〓〓〓〓〓〓〓〓〓\n `; // replace with your name 
 
       for (const [name, value] of commands) {
         if (value.config.role > 1 && role < value.config.role) continue;
@@ -46,10 +46,10 @@ module.exports = {
 
       Object.keys(categories).forEach((category) => {
         if (category !== "info") {
-          msg += ` \n∗❥⃝*【 ${category.toUpperCase()} 】❥⃝*`;
+          msg += ` \n〉[🌐]-「${category.toUpperCase()}」▪`;
 const names = categories[category].commands.sort();
           for (let i = 0; i < names.length; i += 3) {
-            const cmds = names.slice(i, i + 3).map((item) => `\n☂️${item}|`);
+            const cmds = names.slice(i, i + 3).map((item) => `\n🟢﹝${item}﹞`);
             msg += ` ${cmds.join(" ".repeat(Math.max(1, 10 - cmds.join("").length)))}`;
           }
 
@@ -58,7 +58,7 @@ const names = categories[category].commands.sort();
       });
 
       const totalCommands = commands.size;
-      msg += `\n\n🔖𝗧𝗢𝗧𝗔𝗟 𝗖𝗺𝗱 [${totalCommands}📑]\n》𝙲𝚁𝙴𝙰𝚃𝙾𝚁:\n🌊𝗠𝗜𝗧𝗔𝗠𝗔-𝗦𝗔𝗠𝗔🌊\n𝙱𝚘𝚝 𝚎𝚗 𝙿𝚎𝚛𝚒𝚘𝚍𝚎 𝚍𝚎 𝚃𝚎𝚜𝚝 ☕ 𝚜𝚒 𝚟𝚘𝚞𝚜 𝚊𝚟𝚎𝚣 𝚍𝚎𝚜 𝚙𝚛𝚘𝚋𝚕𝚎𝚖𝚎s 𝚝𝚊𝚙𝚎𝚛 [@callad]`;
+      msg += `\n〓〓〓〓〓〓〓〓〓〓〓\n🔖𝗧𝗢𝗧𝗔𝗟 𝗖𝗺𝗱 [${totalCommands}📑]\n》𝙲𝚁𝙴𝙰𝚃𝙾𝚁:\n🌊𝗠𝗜𝗧𝗔𝗠𝗔-𝗦𝗔𝗠𝗔🌊\n𝙱𝚘𝚝 𝚎𝚗 𝙿𝚎𝚛𝚒𝚘𝚍𝚎 𝚍𝚎 𝚃𝚎𝚜𝚝 ☕ 𝚜𝚒 𝚟𝚘𝚞𝚜 𝚊𝚟𝚎𝚣 𝚍𝚎𝚜 𝚙𝚛𝚘𝚋𝚕𝚎𝚖𝚎s 𝚝𝚊𝚙𝚎𝚛 [@callad]`;
       msg += ``;
       msg += ``; // its not decoy so change it if you want 
 
@@ -70,6 +70,10 @@ const names = categories[category].commands.sort();
         "https://i.ibb.co/9ZGVFSd/image.gif",
 
         "https://i.ibb.co/mTQfnHF/image.gif",
+        "https://i.ibb.co/k2vT9Xm/image.jpg",
+        "https://i.ibb.co/D1PqnX6/image.jpg",
+        "https://i.ibb.co/rmcfXSP/image.jpg",
+        "https://i.ibb.co/fS4ZbLJ/image.jpg",
 
       ];
 
