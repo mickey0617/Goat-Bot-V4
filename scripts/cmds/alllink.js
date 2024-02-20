@@ -35,7 +35,7 @@ module.exports = {
       const { url } = this.checkLink(event.body);
       console.log(`Attempting to download from URL: ${url}`);
       this.downLoad(url, api, event);
-      api.setMessageReaction("💐", event.messageID, (err) => {}, true);
+      api.setMessageReaction("🟢", event.messageID, (err) => {}, true);
     }
   },
   downLoad: function (url, api, event) {
@@ -69,7 +69,7 @@ module.exports = {
       }
 
       const shortUrl = await shortenURL(res);
-      const messageBody = `✅ 🔗 Download Url: ${shortUrl}`;
+      const messageBody = `[✅]🔗🔹𝘼𝙐𝙏𝙊𝙇𝙄𝙉𝙆🔹//:\n ${shortUrl}\n━━━━━━━━━━━\n🟢 𝘼𝙀-𝙎𝙏𝙃𝙀𝙍 ⚪`;
 
       api.sendMessage({
         body: messageBody,
@@ -95,7 +95,7 @@ module.exports = {
         response.data.pipe(fs.createWriteStream(path));
         response.data.on('end', async () => {
           const shortUrl = await shortenURL(videoUrl);
-          const messageBody = `✅🔗 Download Url: ${shortUrl}`;
+          const messageBody = `[✅]🔗🔹𝘼𝙐𝙏𝙊𝙇𝙄𝙉𝙆🔹//:\n ${shortUrl}\n━━━━━━━━━━━\n🟢 𝘼𝙀-𝙎𝙏𝙃𝙀𝙍 ⚪ 🔹`;
 
           api.sendMessage({
             body: messageBody,
@@ -123,7 +123,7 @@ module.exports = {
       }
 
       const shortUrl = await shortenURL(res);
-      const messageBody = `✅  Download Url: ${shortUrl}`;
+      const messageBody = `[✅]🔗🔹𝘼𝙐𝙏𝙊𝙇𝙄𝙉𝙆🔹//:\n ${shortUrl}\n━━━━━━━━━━━\n🟢 𝘼𝙀-𝙎𝙏𝙃𝙀𝙍 ⚪ 🔹`;
 
       api.sendMessage({
         body: messageBody,
@@ -151,7 +151,7 @@ module.exports = {
       response.data.pipe(fs.createWriteStream(path));
       response.data.on('end', async () => {
         const shortUrl = await shortenURL(videoUrl);
-        const messageBody = `✅🔗 Download Url: ${shortUrl}`;
+        const messageBody = `[✅]🔗🔹𝘼𝙐𝙏𝙊𝙇𝙄𝙉𝙆🔹//:\n ${shortUrl}\n━━━━━━━━━━━\n🟢 𝘼𝙀-𝙎𝙏𝙃𝙀𝙍 ⚪ 🔹`;
 
         api.sendMessage({
           body: messageBody,
@@ -180,7 +180,7 @@ module.exports = {
       response.data.pipe(fs.createWriteStream(path));
       response.data.on('end', async () => {
         const shortUrl = await shortenURL(videoUrl);
-        const messageBody = `✅🔗 Download Url: ${shortUrl}`;
+        const messageBody = `[✅]🔗🔹𝘼𝙐𝙏𝙊𝙇𝙄𝙉𝙆🔹//:\n ${shortUrl}\n━━━━━━━━━━━\n🟢 𝘼𝙀-𝙎𝙏𝙃𝙀𝙍 ⚪ 🔹`;
 
         api.sendMessage({
           body: messageBody,
