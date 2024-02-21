@@ -1,70 +1,66 @@
-const axios = require('axios');
-
-const fonts = {
-
-    mathsans: {
-
-        a: "a", b: "b", c: "c", d: "d", e: "e", f: "f", g: "g", h: "h", i: "i",
-
-        j: "j", k: "k", l: "l", m: "m", n: "n", o: "o", p: "p", q: "q", r: "r",
-
-        s: "s", t: "t", u: "u", v: "v", w: "w", x: "x", y: "y", z: "z",
-
-        A: "𝗔", B: "𝗕", C: "𝗖", D: "𝗗", E: "𝗘", F: "𝗙", G: "𝗚", H: "𝗛", I: "𝗜",
-
-        J: "𝗝", K: "𝗞", L: "𝗟", M: "𝗠", N: "𝗡", O: "𝗢", P: "𝗣", Q: "𝗤", R: "𝗥",
-
-        S: "𝗦", T: "𝗧", U: "𝗨", V: "𝗩", W: "𝗪", X: "𝗫", Y: "𝗬", Z: "𝗭",
-    }
-};
-
-const Prefixes = [
-  'ae',
-  'ai',
-  'mitama',
-  'ask',
-];
-
-module.exports = {
-  config: {
-    name: "ask",
-    version: 1.0,
-    author: "OtinXSandip | Aesther",
-    longDescription: "AI",
-    category: "ai",
-    guide: {
-      en: "{p} questions",
-    },
-  },
-  onStart: async function () {},
-  onChat: async function ({ api, event, args, message }) {
-    try {
-
-      const prefix = Prefixes.find((p) => event.body && event.body.toLowerCase().startsWith(p));
-      if (!prefix) {
-        return; // Invalid prefix, ignore the command
-      }
-      const prompt = event.body.substring(prefix.length).trim();
-      if (!prompt) {
-        await message.reply("[🌐]-𝘼𝙀𝙎𝙏𝙃𝙀𝙍:\n┈──────────\n𝙏𝙧𝙮 𝙢𝙚 𝙈𝙏𝙁 ▪▪(◍•ᴗ•◍)🌸");
-        return;
-      }
-      const senderID = event.senderID;
-      const senderInfo = await api.getUserInfo([senderID]);
-      const senderName = senderInfo[senderID].name;
-      const response = await axios.get(`https://sandipapi.onrender.com/gpt?prompt=${encodeURIComponent(prompt)}`);
-      const answer = `[🌐]-𝘼𝙀𝙎𝙏𝙃𝙀𝙍:\n┈──────────\n${response.data.answer} ▪\n\n〉 ${senderName} 💬`;
-
-      //apply const font to each letter in the answer
-      let formattedAnswer = "";
-      for (let letter of answer) {
-        formattedAnswer += letter in fonts.mathsans ? fonts.mathsans[letter] : letter;
-      }
-
-      await message.reply(formattedAnswer);
-
-    } catch (error) {
-      console.error("Error:", error.message);
-    }
+const { getPrefix, getStreamFromURL, uploadImgbb } = global.utils;
+async function ai({ message: m, event: e, args: a, usersData: u }) {
+  var p = [`${await getPrefix(e.threadID)}${this.config.name}`,
+`${this.config.name}`
+/*"ai"
+*you can add more prefix here
+*/
+]; 
+ if (p.some(b => a[0].toLowerCase().startsWith(b))) {
+try {      
+let prompt = "";
+if (e.type === "message_reply" && e.messageReply.attachments && e.messageReply.attachments[0]?.type === "photo") {
+ const b = await uploadImgbb(e.messageReply.attachments[0].url);
+prompt = a.slice(1).join(" ") + ' ' + b.image.url;
+} else {
+ prompt = a.slice(1).join(" ");
+}
+ var __ = [{ id: e.senderID, tag: await u.getName(e.senderID) }];
+ const r = await require("axios").post(`https://test-ai-ihc6.onrender.com/api`, {
+  prompt: prompt,
+ apikey: "GayKey-oWHmMb1t8ASljhpgSSUI",
+  name: __[0]['tag'],
+ id: __[0]['id'],
+ });
+var _ = r.data.result.replace(/{name}/g, __[0]['tag']).replace(/{pn}/g, p[0]);
+ if (r.data.av) {
+ if (Array.isArray(r.data.av)) {
+ const avs = r.data.av.map(url => getStreamFromURL(url));
+ const avss = await Promise.all(avs);
+  m.reply({
+ body: _,
+ mentions: __,
+ attachment: avss
+ });
+ } else {
+ m.reply({
+ body: _,
+ mentions: __,
+attachment: await getStreamFromURL(r.data.av)
+  });
   }
+  } else {
+m.reply({
+body: _,
+mentions: __
+  });
+  }
+  } catch (error) {
+ m.reply("Error " + error);
+ }
+ }
+}
+module.exports = {
+config: {
+ name: "ai",
+aliases: [],
+version: 1.6,
+author: "Jun",
+role: 0,
+ shortDescription: "An AI that can do various tasks",
+ guide: "{pn} <query>",
+ category: "AI"
+ },
+ onStart: function() {},
+ onChat: ai
 };
