@@ -1,4 +1,4 @@
-@cmd install animiror.js const axios = require("axios");
+const axios = require("axios");
 const { getStreamFromURL } = global.utils;
 
 
