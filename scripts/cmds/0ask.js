@@ -46,14 +46,14 @@ module.exports = {
       }
       const prompt = event.body.substring(prefix.length).trim();
       if (!prompt) {
-        await message.reply("🔸𝘼𝙀🔹:\n⊰🌟⊱┈────╌❊\n𝙏𝙧𝙮 𝙢𝙚 𝙈𝙏𝙁 ▪▪(◍•ᴗ•◍)🌸");
+        await message.reply("[🌐]-𝘼𝙀𝙎𝙏𝙃𝙀𝙍:\n┈──────────\n𝙏𝙧𝙮 𝙢𝙚 𝙈𝙏𝙁 ▪▪(◍•ᴗ•◍)🌸");
         return;
       }
       const senderID = event.senderID;
       const senderInfo = await api.getUserInfo([senderID]);
       const senderName = senderInfo[senderID].name;
       const response = await axios.get(`https://sandipapi.onrender.com/gpt?prompt=${encodeURIComponent(prompt)}`);
-      const answer = `🔸𝘼𝙀🔹:\n⊰🌟⊱┈────╌❊\n${response.data.answer} 🟡\n\n 〉${senderName} ▪`;
+      const answer = `[🌐]-𝘼𝙀𝙎𝙏𝙃𝙀𝙍:\n┈──────────\n${response.data.answer} ▪\n\n〉 ${senderName} 💬`;
 
       //apply const font to each letter in the answer
       let formattedAnswer = "";
