@@ -21,9 +21,9 @@ const fonts = {
 const Prefixes = [
   'ae',
   'ai',
-  'mitama',
+  'mickey',
   'ask',
-  'mitantsoa', 
+  'bot', 
 ];
 
 module.exports = {
@@ -47,14 +47,14 @@ module.exports = {
       }
       const prompt = event.body.substring(prefix.length).trim();
       if (!prompt) {
-        await message.reply("🟢 𝘼𝙀-𝙎𝙏𝙃𝙀𝙍 ⚪ 🔹\n\n[ദ്ദി ˉ͈̀꒳ˉ͈́ )✧]....?");
+        await message.reply("✨ 𝐌𝐈𝐂𝐊𝐄𝐘 ✨ 🔹\n\n[ദ്ദി ˉ͈̀꒳ˉ͈́ )✧]....?");
         return;
       }
       const senderID = event.senderID;
       const senderInfo = await api.getUserInfo([senderID]);
       const senderName = senderInfo[senderID].name;
       const response = await axios.get(`https://sandipapi.onrender.com/gpt?prompt=${encodeURIComponent(prompt)}`);
-      const answer = `🟢 𝘼𝙀-𝙎𝙏𝙃𝙀𝙍 ⚪ :\n──────────── \n${response.data.answer} 🟡`;
+      const answer = `✨ 𝐌𝐈𝐂𝐊𝐄𝐘 ✨ :\n──────────── \n${response.data.answer} ✨`;
 
       //apply const font to each letter in the answer
       let formattedAnswer = "";
