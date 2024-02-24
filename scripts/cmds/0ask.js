@@ -47,7 +47,7 @@ module.exports = {
       }
       const prompt = event.body.substring(prefix.length).trim();
       if (!prompt) {
-        await message.reply("✨ 𝐌𝐈𝐂𝐊𝐄𝐘 *╔═══❖•ೋ° °ೋ•❖═══╗*✨ Veuillez poser la question à votre convenance et je m'efforcerai de vous fournir une réponse efficace🙂🤓. Votre satisfaction est ma priorité absolue✨. (𝐄𝐃𝐈𝐓 𝐛𝐲 𝐌𝐈𝐂𝐊𝐄𝐘 ✨*╚═══❖•ೋ° °ೋ•❖═══╝*");
+        await message.reply("✨ Veuillez poser la question à votre convenance et je m'efforcerai de vous fournir une réponse efficace🙂🤓. Votre satisfaction est ma priorité absolue✨. (𝐄𝐃𝐈𝐓 𝐛𝐲 𝐌𝐈𝐂𝐊𝐄𝐘 ✨");
         return;
       }
       const senderID = event.senderID;
