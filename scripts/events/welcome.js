@@ -26,10 +26,10 @@ module.exports = {
 			session2: "noon",
 			session3: "afternoon",
 			session4: "evening",
-			welcomeMessage: "✦𝘽𝙊𝙏-𝙇𝙊𝙂 [✅](◍•ᴗ•◍)\n━━━━━━━━━━━\n┏━━━━━━━━━━\n➤﹝🌐﹞𝙿𝚛𝚎𝚏𝚒𝚡「 %1」\n𝗕𝗢𝗧:💬»𝘼𝙀𝙎𝙏𝙃𝙀𝙍\n[ദ്ദി ˉ͈̀꒳ˉ͈́ )✧]....✔️\n┗━━━━━━━━━━\n 🟢 𝘼𝙀-𝙎𝙏𝙃𝙀𝙍 ⚪ 🔹",
+			welcomeMessage: "✦𝘽𝙊𝙏-𝙇𝙊𝙂 [✅](◍•ᴗ•◍)\n━━━━━━━━━━━\n┏━━━━━━━━━━\n➤﹝✨﹞𝙿𝚛𝚎𝚏𝚒𝚡「 %1」\n𝗕𝗢𝗧:💬» 𝐌𝐈𝐂𝐊𝐄𝐘 \n[ദ്ദി ˉ͈̀꒳ˉ͈́ )✧]....✔️\n┗━━━━━━━━━━\n ✨ 𝐌𝐈𝐂𝐊𝐄𝐘 ✨ 🔹",
 			multiple1: "you",
 			multiple2: "you guys",
-			defaultWelcomeMessage: `💬 | [{userName}🏅] \n⊰᯽⊱┈──╌❊\n◈𝗕𝗢𝗧──[💬》𝗔𝗘♡]\n◈𝗣𝗙──[@](𝘴𝘴𝘵𝘮)\n⊰᯽⊱┈──╌❊\n𝙴𝚗𝚓𝚘𝚢 𝚢𝚘𝚞𝚛 𝚜𝚝𝚊𝚢 𝙷𝚎𝚛𝚎 【{boxName}】🌸`
+			defaultWelcomeMessage: `💬 | [{userName}✨] \n⊰᯽⊱┈──╌❊\n◈𝗕𝗢𝗧──[💬》✨ 𝐌𝐈𝐂𝐊𝐄𝐘 ✨]\n◈𝗣𝗙──[@](𝘴𝘴𝘵𝘮)\n⊰᯽⊱┈──╌❊\n𝙴𝚗𝚓𝚘𝚢 𝚢𝚘𝚞𝚛 𝚜𝚝𝚊𝚢 𝙷𝚎𝚛𝚎 【{boxName}】🌸`
 		}
 	},
 
